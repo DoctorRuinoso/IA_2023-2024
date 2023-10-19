@@ -54,57 +54,57 @@
 )
 
 (defrule transitividad_norte
-    ((ubicacion ?x Norte ?y)
-    (ubicacion ?y Norte ?z))
+    (ubicacion ?x Norte ?y)
+    (ubicacion ?y Norte ?z)
     =>
     (assert(ubicacion ?x Norte ?z))
 )
 
 (defrule transitividad_sur
-    ((ubicacion ?x Sur ?y)
-    (ubicacion ?y Sur ?z))
+    (ubicacion ?x Sur ?y)
+    (ubicacion ?y Sur ?z)
     =>
     (assert(ubicacion ?x Sur ?z))
 )
 
 (defrule transitividad_este
-    ((ubicacion ?x Este ?y)
-    (ubicacion ?y Este ?z))
+    (ubicacion ?x Este ?y)
+    (ubicacion ?y Este ?z)
     =>
     (assert(ubicacion ?x Este ?z))
 )
 
 (defrule transitividad_oeste
-    ((ubicacion ?x Oeste ?y)
-    (ubicacion ?y Oeste ?z))
+    (ubicacion ?x Oeste ?y)
+    (ubicacion ?y Oeste ?z)
     =>
     (assert(ubicacion ?x Oeste ?z))
 )
 
 (defrule noroeste
-    ((ubicacion ?z Norte ?y)
-    (ubicacion ?z Este ?x))
+    (ubicacion ?z Norte ?y)
+    (ubicacion ?z Este ?x)
     =>
     (assert(ubicacion ?x Noroeste ?y))
 )
 
 (defrule noreste
-    ((ubicacion ?z Norte ?y)
-    (ubicacion ?z Oeste ?x))
+    (ubicacion ?z Norte ?y)
+    (ubicacion ?z Oeste ?x)
     =>
     (assert(ubicacion ?x Noreste ?y))
 )
 
 (defrule suroeste
-    ((ubicacion ?z Sur ?y)
-    (ubicacion ?z Este ?x))
+    (ubicacion ?z Sur ?y)
+    (ubicacion ?z Este ?x)
     =>
     (assert(ubicacion ?x Suroeste ?y))
 )
 
 (defrule sureste
-    ((ubicacion ?z Sur ?y)
-    (ubicacion ?z Oeste ?x))
+    (ubicacion ?z Sur ?y)
+    (ubicacion ?z Oeste ?x)
     =>
     (assert(ubicacion ?x Sureste ?y))
 )
